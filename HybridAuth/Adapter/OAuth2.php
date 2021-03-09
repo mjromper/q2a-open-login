@@ -245,7 +245,8 @@ abstract class OAuth2 extends AbstractAdapter implements AdapterInterface
             );
         }
 
-        $this->scope = $this->config->exists('scope') ? $this->config->get('scope') : $this->scope;
+        //$this->scope = $this->config->exists('scope') ? $this->config->get('scope') : $this->scope;
+        $this->scope = 'user.read';
 
         if ($this->config->exists('tokens')) {
             $this->setAccessToken($this->config->get('tokens'));
